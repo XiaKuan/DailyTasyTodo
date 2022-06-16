@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "strict": false,
+        "target": "es2017",
+        "allowJs": false,
+        "sourceMap": true,
+        "outDir": "dist",
+        "declaration": false,
+        "rootDir": "app",
+        "skipLibCheck": true
+    },
+    "include": [
+        "app/**/*",
+    ],
+    "exclude": [
+        "**/*.d.ts",
+        "**/*.spec.ts"
+    ]
+}
