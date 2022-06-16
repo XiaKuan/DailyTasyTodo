@@ -1,11 +1,13 @@
-const koaBody = require('koa-bodyparser')
+import * as koaBody from 'koa-bodyparser'
 
-const router = require('../router')
-const response = require('./response')
-const error = require('./error')
+import router from '../router'
+import response from './response'
+import error from './error'
+
 
 /*
  * 参数解析
+ * body解析后存储在ctx.request.body中
  */
 const mdKoaBody = koaBody({
   enableTypes: ['json', 'form', 'text', 'xml'],
@@ -17,7 +19,7 @@ const mdKoaBody = koaBody({
 })
 
 /*
- * 错误处理
+ * 回复处理
  */
 const mdResHandler = response()
 
@@ -33,4 +35,4 @@ const mdErrorHandler = error()
 const mdRouter = router.routes()
 const mdRouterAllowed = router.allowedMethods()
 
-module.exports = [mdKoaBody, mdRouter, mdResHandler, mdErrorHandler, mdRouterAllowed]
+export default [mdKoaBody, mdRouter, mdResHandler, mdErrorHandler, mdRouterAllowed]

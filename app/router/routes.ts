@@ -1,4 +1,4 @@
-const { test } = require('../controllers')
+import test from "../controllers"
 
 const routes = [
   {
