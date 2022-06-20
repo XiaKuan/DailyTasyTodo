@@ -19,6 +19,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-compose": "^4.1.0",
     "koa-router": "^10.1.1",
+    "moment": "^2.29.3",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.0"
   },
