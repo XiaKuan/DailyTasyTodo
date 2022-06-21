@@ -3,7 +3,7 @@ import {
 } from "../controllers"
 import { route } from '../types/route'
 
-const routes: route[] = [
+export const routes: route[] = [
   {
     // todo任务
     method: 'get',
@@ -39,4 +39,3 @@ const routes: route[] = [
   },
 ]
 
-module.exports = routes

@@ -7,7 +7,8 @@ CREATE TABLE if not exists `tasks` (
   `type` varchar(20) NOT NULL DEFAULT 'daily' COMMENT '任务类型',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unq_user_id_task_name` (`user_id`,`task_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4
  
 
