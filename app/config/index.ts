@@ -21,3 +21,8 @@ export default {
     expiresIn: 60 * 60
   }
 }
+
+export enum Type {
+  human = 1,
+  animal = 2,
+}
